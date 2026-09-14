@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07182f" />
+      <stop offset="50%" stop-color="#0d3b2e" />
+      <stop offset="100%" stop-color="#0a2240" />
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#f0fdf4" />
+      <stop offset="100%" stop-color="#86efac" />
+    </linearGradient>
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0d5c3a" />
+      <stop offset="100%" stop-color="#15803d" />
+    </linearGradient>
+    <linearGradient id="wave1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#107c41" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0.15" />
+    </linearGradient>
+    <linearGradient id="wave2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d6a11e" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#107c41" stop-opacity="0.4" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255, 255, 255, 0.04)" stroke-width="1"/>
+    </pattern>
+    <style>
+      .pulse-circle {
+        animation: pulse 4s infinite ease-in-out;
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.15; transform: scale(1); }
+        50% { opacity: 0.3; transform: scale(1.06); }
+      }
+      .title-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        letter-spacing: 2.5px;
+      }
+      .sub-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 500;
+        letter-spacing: 0.6px;
+      }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="340" rx="16" fill="url(#bgGrad)" />
+  <rect width="1200" height="340" rx="16" fill="url(#grid)" />
+
+  <!-- Ambient Glow Orbs -->
+  <circle cx="160" cy="90" r="140" fill="#107c41" opacity="0.18" class="pulse-circle" />
+  <circle cx="1060" cy="180" r="160" fill="#d6a11e" opacity="0.10" />
+
+  <!-- Flowing Bottom Waves -->
+  <path d="M 0,270 C 300,230 600,310 900,260 C 1050,235 1150,250 1200,270 L 1200,340 L 0,340 Z" fill="url(#wave1)" />
+  <path d="M 0,290 C 250,325 550,255 850,295 C 1020,315 1120,290 1200,305 L 1200,340 L 0,340 Z" fill="url(#wave2)" />
+
+  <!-- Top Department Badge -->
+  <g transform="translate(600, 58)" filter="url(#shadow)">
+    <rect x="-240" y="-18" width="480" height="36" rx="18" fill="url(#badgeGrad)" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+    <circle cx="-215" cy="0" r="5" fill="#4ade80">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <text x="-200" y="5" fill="#ffffff" font-size="13" font-weight="700" font-family="'Segoe UI', sans-serif" letter-spacing="1.5">RV UNIVERSITY • COMPUTER SCIENCE &amp; ENGINEERING</text>
+  </g>
+
+  <!-- Main Portal Title -->
+  <text x="600" y="146" text-anchor="middle" class="title-text" font-size="44" fill="url(#textGrad)" filter="url(#shadow)">CAMPUS CONNECT PORTAL</text>
+
+  <!-- Subtitle Tagline -->
+  <text x="600" y="188" text-anchor="middle" class="sub-text" font-size="17" fill="#cbd5e1">Unified Digital Gateway for Students, Faculty &amp; Academic Administration</text>
+
+  <!-- Feature Pills Row -->
+  <g transform="translate(600, 236)">
+    <!-- Pill 1 -->
+    <g transform="translate(-250, 0)">
+      <rect x="-90" y="-14" width="180" height="28" rx="14" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+      <text x="0" y="5" text-anchor="middle" fill="#e2e8f0" font-size="12" font-family="'Segoe UI', sans-serif" font-weight="600">📚 CS3301 Full Stack</text>
+    </g>
+    <!-- Pill 2 -->
+    <g transform="translate(0, 0)">
+      <rect x="-90" y="-14" width="180" height="28" rx="14" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+      <text x="0" y="5" text-anchor="middle" fill="#86efac" font-size="12" font-family="'Segoe UI', sans-serif" font-weight="600">⚡ React 19 + Vite</text>
+    </g>
+    <!-- Pill 3 -->
+    <g transform="translate(250, 0)">
+      <rect x="-90" y="-14" width="180" height="28" rx="14" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+      <text x="0" y="5" text-anchor="middle" fill="#e2e8f0" font-size="12" font-family="'Segoe UI', sans-serif" font-weight="600">🎓 Campus Portal</text>
+    </g>
+  </g>
+</svg>

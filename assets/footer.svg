@@ -1,0 +1,15 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 90" width="100%" height="100%">
+  <defs>
+    <linearGradient id="footBg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0a2240" />
+      <stop offset="50%" stop-color="#0d5c3a" />
+      <stop offset="100%" stop-color="#107c41" />
+    </linearGradient>
+    <linearGradient id="footWave" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#107c41" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#d6a11e" stop-opacity="0.25" />
+    </linearGradient>
+  </defs>
+  <path d="M 0,35 C 300,10 600,60 900,20 C 1050,0 1150,30 1200,25 L 1200,90 L 0,90 Z" fill="url(#footWave)" />
+  <path d="M 0,45 C 250,65 550,25 850,50 C 1020,65 1120,40 1200,50 L 1200,90 L 0,90 Z" fill="url(#footBg)" />
+</svg>

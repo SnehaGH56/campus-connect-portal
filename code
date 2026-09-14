@@ -1,1 +1,0 @@
-mkdir src, src/config, src/controllers, src/models, src/routes, src/middleware

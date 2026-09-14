@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Connect Portal | RV University</title>
+    <meta name="description" content="Campus Connect Portal - RV University School of Computer Science & Engineering">
+    <meta name="author" content="Campus Connect Portal">
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+    <header class="navbar">
+    <div class="logo-group">
+        <div class="brand-badge">RV</div>
+        <div>
+            <span class="university-name">RV UNIVERSITY<sup>&reg;</sup></span>
+            <p class="sub-dept">School Of Computer Science & Engineering</p>
+        </div>
+    </div>
+    <div class="nav-actions">
+        <a href="#login" class="btn-secondary">Login</a>
+        <a href="#register" class="btn-primary">Register</a>
+    </div></header>
+    <main>
+
+    <section class="hero-banner">
+        <div class="hero-content">
+            <span class="module-tag">CS3301 - FULL STACK DEVELOPMENT</span>
+            <h1>CAMPUS CONNECT PORTAL</h1>
+            <p class="subtitle">Connecting Students, Faculty, and Administrators  </p>
+            <div class="hero-cta-group">
+                <a href="#roles" class="btn-hero-primary">Explore user Portal</a>
+            </div>
+        </div>
+    </section>
+    <section class="section-container">
+        <h2 class="section-title">Campus Life & Portal Highlights</h2>
+        <p class="section-subtitle">Explore the features and benefits of our campus portal</p>
+        <div class="carousel-wrapper">
+            <button class="carousel-btn prev-btn" id="prevBtn">&#10094;</button>
+            <div class="carousel-track" id="carouselTrack">
+                <!-- Slide 1 -->
+                 <div class="slide active-slide">
+                    <img src="/src/assets/slide1.jpg" alt="Slide 1">
+                    <div class="slide-content">Modern University infrastructure and Facilities</div>   
+                </div>
+                <!-- Slide 2 -->
+                <div class="slide">
+                    <img src="/src/assets/slide2.webp" alt="Slide 2">
+                    <div class="slide-content">Collaborative Learning Environment</div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="slide">
+                    <img src="/src/assets/slide3.webp" alt="Slide 3">
+                    <div class="slide-content">Real-Time Academic Management</div>
+                </div>
+            </div>
+            <button
+                class="carousel-btn next-btn"
+                id="nextBtn"
+                aria-label="Next slide">
+                &#10095;
+            </button>
+
+        </div>
+
+
+        <!-- Slide Indicators -->
+        <div class="carousel-dots" id="carouselDots">
+
+            <span
+                class="dot active-dot"
+                data-index="0">
+            </span>
+
+            <span
+                class="dot"
+                data-index="1">
+            </span>
+
+            <span
+                class="dot"
+                data-index="2">
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- User Role Section -->
+    <section id="roles" class="section-container bg-light">
+
+        <h2 class="section-title">
+            Choose Your Portal View
+        </h2>
+
+
+        <div class="roles-grid">
+
+
+            <!-- Student Card -->
+            <article class="role-card student-border">
+
+                <div class="role-icon">
+                    👨‍🎓
+                </div>
+
+                <h3>
+                    Student Portal
+                </h3>
+
+                <ul class="feature-bullets">
+
+                    <li> View Notices & Events</li>
+                    <li> Submit Assignments</li>
+                    <li> Track Attendance</li>
+                    <li> Update Profile</li>
+
+                </ul>
+
+                <button class="btn-portal student-bg">
+                    Access Student View
+                </button>
+
+            </article>
+
+
+            <!-- Faculty Card -->
+            <article class="role-card faculty-border">
+
+                <div class="role-icon">
+                    👨‍🏫
+                </div>
+
+                <h3>
+                    Faculty Portal
+                </h3>
+
+                <ul class="feature-bullets">
+
+                    <li> Post Notices & Events</li>
+                    <li> Create Assignments</li>
+                    <li> Mark Attendance</li>
+                    <li> View Submissions</li>
+
+                </ul>
+
+                <button class="btn-portal faculty-bg">
+                    Access Faculty View
+                </button>
+
+            </article>
+
+
+            <!-- Admin Card -->
+            <article class="role-card admin-border">
+
+                <div class="role-icon">
+                    🛡️
+                </div>
+
+                <h3>
+                    Admin Portal
+                </h3>
+
+                <ul class="feature-bullets">
+
+                    <li> Manage Users</li>
+                    <li> Manage Notices & Events</li>
+                    <li> View System Reports</li>
+                    <li> System Settings</li>
+
+                </ul>
+
+                <button class="btn-portal admin-bg">
+                    Access Admin View
+                </button>
+
+            </article>
+
+
+        </div>
+
+    </section>
+        <!-- Student Registration Section -->
+    <section id="register">
+        <div id="root"></div>
+    </section>
+
+    </main>
+    <footer class="footer">
+    <p>&copy; 2026 RV University - Campus Connect Portal</p>
+    <p>Campus Connect Portal | CS3301 - Full Stack Development</p>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="/src/carousel.js"></script>
+    </body>
+
+</html>
