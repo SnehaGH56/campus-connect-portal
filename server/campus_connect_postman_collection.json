@@ -1,0 +1,157 @@
+{
+  "info": {
+    "_postman_id": "c6a1b2c3-d4e5-4f6a-8b7c-123456789abc",
+    "name": "Campus Connect Portal - Experiment 6 RESTful API",
+    "description": "Postman Collection for Experiment 6: Developing and Consuming Backend Services Using RESTful API Principles (Node.js and Express). Covers CRUD operations, validation middleware, and error handling for the student resource.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Health & Index Endpoint",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": [""]
+        },
+        "description": "Health check and API overview endpoint showing available routes."
+      }
+    },
+    {
+      "name": "2. Read All Students (GET)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/students",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "students"]
+        },
+        "description": "Fetches all student records from in-memory storage."
+      }
+    },
+    {
+      "name": "3. Read Single Student by ID (GET)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/students/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "students", "1"]
+        },
+        "description": "Reads details of a specific student by numeric ID."
+      }
+    },
+    {
+      "name": "4. Create New Student (POST)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Rohan Verma\",\n  \"email\": \"rohan.verma@rvu.edu.in\",\n  \"department\": \"Computer Science & Engineering\",\n  \"year\": 2,\n  \"status\": \"Active\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/students",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "students"]
+        },
+        "description": "Creates a new student record and returns 201 Created."
+      }
+    },
+    {
+      "name": "5. Validation Test - Missing Email (POST)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Invalid Student\",\n  \"department\": \"Design\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/students",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "students"]
+        },
+        "description": "Tests validation middleware. Missing email should return 400 Bad Request."
+      }
+    },
+    {
+      "name": "6. Update Student by ID (PUT)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"year\": 3,\n  \"department\": \"Software Engineering\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/students/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "students", "1"]
+        },
+        "description": "Updates student attributes by ID and returns 200 OK."
+      }
+    },
+    {
+      "name": "7. Delete Student by ID (DELETE)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/students/2",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "students", "2"]
+        },
+        "description": "Deletes student record by ID and returns 200 OK."
+      }
+    },
+    {
+      "name": "8. Test 404 Route Not Found",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/nonexistent",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "nonexistent"]
+        },
+        "description": "Tests 404 error handler middleware on unknown routes."
+      }
+    }
+  ]
+}

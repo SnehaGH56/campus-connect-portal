@@ -1,4 +1,4 @@
-﻿# 🎓 Campus Connect Portal
+# 🎓 Campus Connect Portal
 
 > A modern, integrated web platform engineered for RV University to unify student resources, faculty collaboration, and academic management into one cohesive ecosystem.
 
@@ -103,6 +103,37 @@ npm install
 npm run dev
 ```
 The server will initialize on its designated local port.
+
+---
+
+## 🧪 Experiment 6: RESTful API Backend & CRUD Services
+
+Campus Connect Portal includes a RESTful backend service built with Node.js and Express supporting full CRUD operations, modular middleware, and in-memory persistence.
+
+### API Endpoints
+
+| Method | Endpoint | Description |
+| :--- | :--- | :--- |
+| `GET` | `/` | Health check & API directory |
+| `GET` | `/api/students` | Retrieve all student records (supports `?department=`) |
+| `GET` | `/api/students/:id` | Retrieve student details by numeric ID |
+| `POST` | `/api/students` | Create new student record (with schema validation) |
+| `PUT` | `/api/students/:id` | Update existing student record |
+| `DELETE` | `/api/students/:id` | Remove student record |
+
+### Run Backend & Tests
+
+```bash
+# 1. Start Express Server (Port 5000)
+cd server
+npm start
+
+# 2. Run Automated API Test Suite (9/9 tests)
+npm test
+```
+
+A Postman collection is also provided at [`server/campus_connect_postman_collection.json`](./server/campus_connect_postman_collection.json).
+Detailed lab report is available in [`EXPERIMENT_6.md`](./EXPERIMENT_6.md).
 
 ---
 

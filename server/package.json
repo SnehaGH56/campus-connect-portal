@@ -1,19 +1,28 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Campus Connect Portal - RESTful API Backend Service (Experiment 6)",
+  "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "node test-api.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "express",
+    "nodejs",
+    "rest-api",
+    "crud",
+    "middleware",
+    "campus-connect"
+  ],
+  "author": "Sneha",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
     "bcryptjs": "^3.0.3",
     "cors": "^2.8.6",
-    "dotevn": "^0.0.1-security",
+    "dotenv": "^16.4.7",
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.9.2"
